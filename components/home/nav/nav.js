@@ -42,14 +42,20 @@ export default function Nav(props) {
 							About
 						</Typography>
 					</Link>
-					<Link to="FAQ" className={styles.oneCenter} data-value="1">
+					<a
+						to="FAQ"
+						className={styles.oneCenter}
+						data-value="1"
+						href="https://t.me/AmuzoonCoin"
+						target="_blank"
+					>
 						<Typography
 							className={design.buttonText}
 							data-shadowtext="FAQ"
 						>
 							FAQ
 						</Typography>
-					</Link>
+					</a>
 				</div>
 			</div>
 		</div>

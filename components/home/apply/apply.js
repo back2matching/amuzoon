@@ -20,7 +20,12 @@ export default function Apply(props) {
 				</h1>
 
 				<div className={styles.buttons}>
-					<Button href="https://google.com" className={styles.btn}>
+					<Button
+						href="https://t.me/AmuzoonCoin"
+						target="_blank"
+						disableRipple
+						className={styles.btn}
+					>
 						<Typography
 							className={design.buttonText}
 							data-shadowtext="apply on telegram"
@@ -28,7 +33,12 @@ export default function Apply(props) {
 							apply on telegram
 						</Typography>
 					</Button>
-					<Button href="https://google.com" className={styles.btn}>
+					<Button
+						href="https://twitter.com/Amuzooncoin"
+						target="_blank"
+						disableRipple
+						className={styles.btn}
+					>
 						<Typography
 							className={design.buttonText}
 							data-shadowtext="apply on x"

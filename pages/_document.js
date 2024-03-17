@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 const name = 'Amuzoon';
 const desc =
-	'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+	"Joof Beezoos is done with packages – it's all about the coins now.\n-\n🎉 Moon with $ZOON 🎉";
 const img = 'https://i.imgur.com/g8h9lz6.png';
 
 // >> Script

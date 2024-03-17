@@ -11,7 +11,7 @@ import banana from '@/public/design/banana.svg';
 export default function Hero(props) {
 	return (
 		<div className={styles.section}>
-			<div className={styles.inside}>
+			<div className={styles.inside} id="Home">
 				<div className={styles.left}>
 					<h1
 						className={`${styles.title} ${design.h1Text}`}
@@ -25,7 +25,9 @@ export default function Hero(props) {
 					</Typography>
 					<div className={styles.buttons}>
 						<Button
-							href="https://google.com"
+							href="https://t.me/AmuzoonCoin"
+							target="_blank"
+							disableRipple
 							className={styles.btn}
 						>
 							<Typography

@@ -11,7 +11,7 @@ import coin3 from '@/public/design/coin3.svg';
 // >> Script
 export default function Token(props) {
 	return (
-		<div className={styles.section}>
+		<div className={styles.section} id="About">
 			<div className={styles.inside}>
 				<h1
 					className={`${styles.title} ${design.h1Text}`}
