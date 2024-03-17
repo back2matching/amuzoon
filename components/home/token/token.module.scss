@@ -1,0 +1,184 @@
+@import '@/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+
+	margin-top: 70px;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.inside .coin1 {
+	position: absolute;
+	left: 30px;
+	top: 120px;
+
+	width: 210px;
+	height: auto;
+
+	pointer-events: none;
+}
+
+.inside .coin2 {
+	position: absolute;
+	right: 140px;
+	bottom: -60px;
+
+	width: 87px;
+	height: auto;
+	transform: rotate(36.253deg);
+
+	pointer-events: none;
+}
+
+.inside .coin3 {
+	position: absolute;
+	right: -20px;
+	bottom: 50px;
+
+	width: 138px;
+	height: auto;
+
+	pointer-events: none;
+}
+
+.inside .title {
+	position: relative;
+	width: 100%;
+	text-align: center;
+
+	font-size: 62px;
+}
+
+.inside .desc {
+	position: relative;
+	width: 100%;
+	max-width: 550px;
+	margin: 0 auto;
+	margin-top: 130px;
+
+	text-align: center;
+
+	color: $color-text-primary;
+	font-family: 'Signika Negative';
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.inside .desc::before {
+	position: absolute;
+	content: '';
+	left: 50%;
+	top: -170px;
+	translate: -50% 0;
+
+	width: 641px;
+	height: 355px;
+
+	background: url('../../../public/design/descBg.png');
+	background-size: cover;
+
+	pointer-events: none;
+	z-index: -1;
+}
+
+.section .tokenBg {
+	position: relative;
+	width: 100%;
+	height: 183px;
+
+	margin-top: 140px;
+
+	z-index: 3;
+}
+
+.section .tokenBg .tokenBgInside {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	width: 100%;
+	height: 183px;
+
+	background: url('../../../public/design/tokenBg.png');
+	background-size: auto 100%;
+
+	z-index: 3;
+
+	pointer-events: none;
+}
+
+// RWD
+@media (max-width: 1230px) {
+	.inside .coin1 {
+		left: calc(30px - 100px);
+	}
+
+	.inside .coin2 {
+		right: calc(140px - 100px);
+	}
+
+	.inside .coin3 {
+		right: calc(-20px - 30px);
+	}
+}
+
+@media (max-width: 1000px) {
+	.inside .coin1 {
+		top: auto;
+		bottom: -250px;
+		left: calc(30px - 100px);
+	}
+
+	.inside .coin2 {
+		top: auto;
+		bottom: -100px;
+		right: calc(140px - 100px);
+	}
+
+	.inside .coin3 {
+		top: auto;
+		bottom: -250px;
+		right: calc(-20px - 30px);
+	}
+}
+
+@media (max-width: 800px) {
+	.section {
+		margin-top: 20px;
+	}
+
+	.inside .title {
+		font-size: 42px;
+	}
+
+	.inside .title::before {
+		width: 100%;
+		left: 50%;
+		translate: -50% 0;
+
+		font-size: 42px;
+	}
+}
+
+@media (max-width: 530px) {
+	.inside .desc {
+		margin-top: 50px;
+		font-size: 20px;
+	}
+
+	.inside .desc::before {
+		left: 50%;
+		top: calc(50% - 40px);
+		translate: -50% -50%;
+	}
+}

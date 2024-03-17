@@ -1,0 +1,112 @@
+@import '@/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.inside .logo {
+	position: relative;
+	width: 160px;
+	height: auto;
+	margin-top: 40px;
+
+	z-index: 2;
+
+	transition: opacity $animation1;
+}
+
+.inside .logo:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.inside .center {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+
+.inside .center {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+
+.inside .center .oneCenter {
+	position: relative;
+	width: 160px;
+	height: 60px;
+
+	margin-top: 31px;
+
+	background: url('../../../public/design/shortBtn_1.svg');
+	background-size: cover;
+
+	p {
+		font-size: 24px;
+		margin-top: 12px;
+	}
+
+	transition: opacity $animation1;
+}
+
+.inside .center .oneCenter[data-value='1'] {
+	background: url('../../../public/design/shortBtn_1.svg');
+	background-size: cover;
+}
+
+.inside .center .oneCenter[data-value='2'] {
+	background: url('../../../public/design/shortBtn_2.svg');
+	background-size: cover;
+}
+
+.inside .center .oneCenter[data-value='3'] {
+	background: url('../../../public/design/shortBtn_3.svg');
+	background-size: cover;
+}
+
+.inside .center .oneCenter:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+// RWD
+@media (max-width: 1050px) {
+	.inside .center {
+		justify-content: flex-end;
+		gap: 32px;
+	}
+}
+
+@media (max-width: 820px) {
+	.inside .center {
+		display: none;
+	}
+
+	.inside .logo {
+		margin: 0 auto;
+		margin-top: 24px;
+	}
+}

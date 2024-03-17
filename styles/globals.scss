@@ -1,0 +1,179 @@
+@import './variables.scss';
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+
+	overflow-x: clip;
+}
+
+body {
+	background: $color-background-primary;
+}
+
+.base {
+	background: $color-background-primary;
+	color: $color-text-primary;
+	font-family: $font-signika;
+
+	overflow: clip;
+
+	min-width: 100vw;
+}
+
+a {
+	text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+.image {
+	position: relative;
+	object-fit: contain;
+	width: 100%;
+	height: auto;
+}
+
+.imageCover {
+	position: relative;
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 65654px;
+	background: rgba(255, 255, 255, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 65654px;
+	background-color: $color-scroll;
+}
+
+::selection {
+	color: #fff;
+	background: rgba($color-scroll, 0.6);
+}
+
+img::selection {
+	background: #ffffff00;
+}
+
+.pageLoader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	background: $color-background-primary;
+	z-index: 15;
+
+	opacity: 1;
+	pointer-events: auto;
+	transition: opacity $animation3;
+}
+
+.grass1 {
+	position: absolute;
+	right: 70px;
+	top: 0px;
+	width: 50%;
+	height: 100%;
+
+	transition: right $animation2;
+
+	background: url('../public/design/grass.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+
+.grass1[data-visible='false'] {
+	right: -700px;
+}
+
+.grass1_1 {
+	position: absolute;
+	right: -100px;
+	top: 0px;
+	width: 50%;
+	height: 100%;
+
+	transition: right $animation2;
+
+	background: url('../public/design/grass.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+
+.grass1_1[data-visible='false'] {
+	right: -800px;
+}
+
+.grass2 {
+	position: absolute;
+	left: 70px;
+	top: 0px;
+	width: 50%;
+	height: 100%;
+
+	transition: left $animation2;
+
+	transform: rotate(180deg);
+
+	background: url('../public/design/grass.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+
+.grass2[data-visible='false'] {
+	left: -700px;
+}
+
+.grass2_1 {
+	position: absolute;
+	left: -100px;
+	top: 0px;
+	width: 50%;
+	height: 100%;
+
+	transition: left $animation2;
+
+	transform: rotate(180deg);
+
+	background: url('../public/design/grass.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+
+.grass2_1[data-visible='false'] {
+	left: -800px;
+}
+
+.pageLoader[data-visible='false'] {
+	opacity: 0;
+	pointer-events: none;
+}
+
+// RWD
+@media (max-width: 1110px) {
+}

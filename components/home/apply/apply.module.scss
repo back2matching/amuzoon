@@ -1,0 +1,187 @@
+@import '@/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+
+	margin-top: 150px;
+	padding-bottom: 150px;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.inside .title {
+	position: relative;
+	width: 100%;
+	text-align: center;
+
+	font-size: 62px;
+
+	z-index: 2;
+}
+
+.inside .buttons {
+	position: relative;
+	width: 100%;
+	margin-top: 45px;
+
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+}
+
+.inside .buttons .btn {
+	position: relative;
+	width: 570px;
+	height: 140px;
+
+	background: url('../../../public/design/longBtn.svg');
+	background-size: 100% 100%;
+
+	p {
+		font-size: 32px;
+		margin-top: -10px;
+	}
+
+	transition: opacity $animation1;
+}
+
+.inside .buttons .btn:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.section .leaves {
+	position: absolute;
+	left: -11%;
+	top: 0px;
+	width: 122%;
+
+	display: flex;
+	justify-content: space-between;
+
+	z-index: 1;
+	pointer-events: none;
+}
+
+.section .leaves .leftLeaves {
+	position: relative;
+	width: 461px;
+	height: auto;
+}
+
+.section .leaves .rightLeaves {
+	position: relative;
+	width: 412px;
+	height: auto;
+}
+
+.section .bg {
+	position: absolute;
+	width: 120%;
+	left: -10%;
+	bottom: 120px;
+	height: 183px;
+
+	margin-top: 0px;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.section .bg .bgInside {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	width: 100%;
+	height: 450px;
+
+	background: url('../../../public/design/applyBg.png');
+	background-size: auto 100%;
+
+	z-index: 3;
+
+	pointer-events: none;
+}
+
+// RWD
+@media (max-width: 1250px) {
+	.section .leaves {
+		left: -20%;
+		width: 140%;
+	}
+}
+
+@media (max-width: 950px) {
+	.inside .buttons {
+		gap: 24px;
+	}
+
+	.inside .buttons .btn {
+		p {
+			font-size: 24px;
+			margin-top: -10px;
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.inside .title {
+		font-size: 42px;
+	}
+
+	.inside .title::before {
+		width: 100%;
+		left: 50%;
+		translate: -50% 0;
+
+		font-size: 42px;
+	}
+
+	.section .leaves {
+		top: auto;
+		bottom: 200px;
+		left: -10%;
+		width: 120%;
+	}
+
+	.section .leaves .leftLeaves {
+		position: relative;
+		width: 230px;
+		height: auto;
+	}
+
+	.section .leaves .rightLeaves {
+		position: relative;
+		width: 230px;
+		height: auto;
+	}
+}
+
+@media (max-width: 700px) {
+	.section {
+		margin-top: 230px;
+		padding-bottom: 50px;
+	}
+
+	.inside .buttons {
+		flex-wrap: wrap;
+		gap: 0px;
+	}
+
+	.inside .buttons .btn {
+		width: 100%;
+		height: 100px;
+	}
+
+	.section .bg {
+		bottom: 70px;
+	}
+}

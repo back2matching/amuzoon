@@ -1,0 +1,235 @@
+@import '@/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.inside .left {
+	position: relative;
+	margin-top: 160px;
+}
+
+.inside .left .leftBanana {
+	position: absolute;
+	left: -160px;
+	top: calc(100% - 80px);
+
+	width: 343px;
+	height: auto;
+
+	transform: rotate(10.794deg);
+
+	pointer-events: none;
+}
+
+.inside .right {
+	position: relative;
+	width: 550px;
+	height: auto;
+
+	margin-top: 78px;
+}
+
+.inside .right .rightBanana {
+	position: absolute;
+	right: -90px;
+	top: -90px;
+
+	width: 231px;
+	height: auto;
+
+	transform: rotate(-149.768deg);
+
+	pointer-events: none;
+}
+
+.inside .left .title {
+	position: relative;
+	width: 100%;
+	max-width: 550px;
+
+	font-size: 62px;
+}
+
+.inside .desc {
+	position: relative;
+	width: 100%;
+	max-width: 570px;
+	margin-top: 10px;
+
+	color: $color-text-primary;
+	font-family: 'Signika Negative';
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.inside .buttons {
+	position: relative;
+	margin-top: 21px;
+}
+
+.inside .buttons .btn {
+	position: relative;
+	width: 160px;
+	height: 60px;
+
+	background: url('../../../public/design/shortBtn_2.svg');
+	background-size: cover;
+
+	p {
+		font-size: 24px;
+		margin-top: -10px;
+	}
+
+	transition: opacity $animation1;
+}
+
+.inside .buttons .btn:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.section .heroBg {
+	position: relative;
+	width: 100%;
+	height: 300px;
+
+	margin-top: 30px;
+
+	z-index: 3;
+}
+
+.section .heroBg .heroBgInside {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	width: 100%;
+	height: 600px;
+
+	background: url('../../../public/design/heroBg.png');
+	background-size: auto 100%;
+
+	z-index: 3;
+
+	pointer-events: none;
+}
+
+.section .heroBg .heroBgInside::before {
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+
+	background: linear-gradient(
+		180deg,
+		#fef6d700 80%,
+		#fef6d700 80%,
+		#fef6d7 100%
+	);
+}
+
+// RWD
+@media (max-width: 1150px) {
+	.inside {
+		flex-wrap: wrap;
+	}
+
+	.inside .left {
+		width: 100%;
+		margin-top: 0px;
+	}
+
+	.inside .left .title {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.inside .left .title::before {
+		width: 100%;
+		left: 50%;
+		translate: -50% 0;
+	}
+
+	.inside .desc {
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 16px;
+	}
+
+	.inside .buttons {
+		display: flex;
+		justify-content: center;
+	}
+
+	.inside .right {
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 1050px) {
+	.section {
+		margin-top: 32px;
+	}
+}
+
+@media (max-width: 630px) {
+	.inside .left .leftBanana {
+		top: 0px;
+		transform: rotate(120deg);
+	}
+
+	.inside .right .rightBanana {
+		top: auto;
+		bottom: -50px;
+		transform: rotate(-30deg);
+	}
+}
+
+@media (max-width: 470px) {
+	.inside .left .leftBanana {
+		display: none;
+	}
+
+	.inside .left .title {
+		font-size: 43px;
+	}
+
+	.inside .left .title::before {
+		font-size: 43px;
+	}
+
+	.inside .desc {
+		font-size: 18px;
+	}
+
+	.inside .right {
+		margin-top: 24px;
+	}
+
+	.section .heroBg {
+		height: 200px;
+		margin-top: 0px;
+	}
+
+	.section .heroBg .heroBgInside {
+		height: 300px;
+	}
+}
